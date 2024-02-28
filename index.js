@@ -11,7 +11,7 @@ app.get('/', (req, res) =>{
     res.send('POKE-API');
 });
 
-//Obtener pokemon por id o nombre
+//Get pokemon by id or name
 app.get('/pokemon/:id', async (req, res) => {
     const pokemonId = req.params.id;
     try {
@@ -31,7 +31,7 @@ app.get('/pokemon/:id', async (req, res) => {
     }
 });
 
-//Listar los primeros n Pokemon
+//Get a List the first n Pokemon
 app.get('/pokemon/ListN/:n', async (req, res) => {
     const n = req.params.n;
     try {
@@ -44,7 +44,7 @@ app.get('/pokemon/ListN/:n', async (req, res) => {
     }
 });
 
-//Pokemon por generación 1-9
+//Get Pokemon by generation 1-9
 app.get('/pokemon/generation/:generation', async (req, res) => {
     const gen = req.params.generation;
 
@@ -63,7 +63,7 @@ app.get('/pokemon/generation/:generation', async (req, res) => {
     }
 });
 
-//Movimientos del pokemon especifico por ID
+//get moves from a specific pokemon
 app.get('/pokemon/:id/moves', async (req, res) => {
     const pokemonId = req.params.id;
 
@@ -88,7 +88,7 @@ app.get('/pokemon/:id/moves', async (req, res) => {
     }
 });
 
-//Pokemon por tipo id o nombre
+//get a list of pokemon by type (id or name)
 app.get('/pokemon/type/:type', async (req, res) => {
     const type = req.params.type;
 
